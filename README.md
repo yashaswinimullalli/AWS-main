@@ -16,7 +16,7 @@
 </div>
 
 ---
-👤 Patient Application
+### 👤 Patient Application
 🔗 https://github.com/Preetham-Bharadwaj/AWS-AI-For-Bharath.git
 
 ---
