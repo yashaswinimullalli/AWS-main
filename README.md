@@ -59,7 +59,7 @@ Both use:
                 Shared Database
                          ↓
                ┌──────────────────┐
-               │ Hospital Dashboard│
+               │Hospital Dashboard│
                └──────────────────┘
 ```
 
