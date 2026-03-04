@@ -25,6 +25,13 @@
 🔗 https://github.com/Preetham-Bharadwaj/Hospital-dashboard.git
 
 ---
+# 🌐 Live Demo
+
+## 👤 Patient Application  
+👉 https://preetham-bharadwaj.github.io/AWS-AI-For-Bharath/
+
+## 🏥 Hospital Dashboard  
+👉 https://siddesh-g-h.github.io/Hospital-dashboard/
 
 # 🌟 Project Overview
 
