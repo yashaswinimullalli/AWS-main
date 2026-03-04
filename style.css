@@ -1,0 +1,142 @@
+:root {
+    --primary: #ef4444;
+    --secondary: #10b981;
+    --bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #64748b;
+    --border: #f1f5f9;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg);
+    /* FIGMA DOTTED BACKGROUND */
+    background-image: radial-gradient(#cbd5e1 1.2px, transparent 1.2px);
+    background-size: 32px 32px;
+    color: var(--text-dark);
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* --- GLASSMORPHISM NAVBAR --- */
+.navbar {
+    position: fixed; 
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%; 
+    max-width: 1200px;
+    z-index: 1000;
+    
+    background: rgba(255, 255, 255, 0.4); 
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+    
+    border-radius: 24px;
+    padding: 0.8rem 0;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    max-width: 1100px; margin: 0 auto; display: flex;
+    justify-content: center; align-items: center; padding: 0 2rem;
+}
+
+.logo { display: flex; align-items: center; font-weight: 800; font-size: 1.3rem; gap: 12px; }
+.logo-box { background: var(--primary); color: white; padding: 6px; border-radius: 8px; display: flex; }
+
+.nav-repo-link {
+    text-decoration:none; 
+    color:black; 
+    font-weight:600; 
+    border:1px solid rgba(0,0,0,0.05); 
+    padding:10px 20px; 
+    border-radius:14px; 
+    display:flex; 
+    align-items:center; 
+    gap:8px; 
+    background: rgba(255,255,255,0.5);
+}
+
+/* --- HERO SECTION --- */
+.hero { padding: 12rem 2rem 6rem; text-align: center; }
+
+/* --- THE REVEAL WIPE (NO SHIMMER) --- */
+.wipe-animate {
+    font-size: clamp(2.5rem, 7vw, 4.2rem);
+    font-weight: 800;
+    letter-spacing: -2.5px;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    color: var(--text-dark);
+    
+    -webkit-mask-image: linear-gradient(to right, black 50%, transparent 50%);
+    mask-image: linear-gradient(to right, black 50%, transparent 50%);
+    -webkit-mask-size: 200% 100%;
+    mask-size: 200% 100%;
+    
+    animation: move-reveal 4s linear infinite;
+}
+
+@keyframes move-reveal {
+    0% { -webkit-mask-position: 100% 0; mask-position: 100% 0; }
+    40%, 60% { -webkit-mask-position: 0% 0; mask-position: 0% 0; }
+    100% { -webkit-mask-position: -100% 0; mask-position: -100% 0; }
+}
+
+.subtitle { color: var(--text-muted); font-size: 1.25rem; max-width: 650px; margin: 0 auto 4rem; }
+
+/* --- BENTO CARDS --- */
+.card-container {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 2.5rem; 
+    max-width: 1150px; 
+    margin: 0 auto;
+}
+
+.card {
+    background: white; padding: 4rem 2.5rem; border-radius: 35px;
+    border: 1px solid var(--border);
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.04);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: left;
+}
+
+.card:hover { 
+    transform: translateY(-15px); 
+    box-shadow: 0 40px 80px -15px rgba(37, 99, 235, 0.12);
+    border-color: #dbeafe;
+}
+
+.icon-box { width: 64px; height: 64px; border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 2rem; }
+.p-icon { background: #eff6ff; color: var(--primary); }
+.h-icon { background: #ecfdf5; color: var(--secondary); }
+
+.card h2 { font-size: 1.8rem; margin-bottom: 1rem; font-weight: 700; }
+.card p { color: var(--text-muted); font-size: 1.05rem; margin-bottom: 2.5rem; }
+
+/* --- BUTTONS --- */
+.btn {
+    width: 100%; padding: 20px; border: none; border-radius: 20px;
+    color: white; font-weight: 700; font-size: 1.1rem; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+    transition: all 0.3s;
+}
+.btn-p { background: linear-gradient(135deg, #3b82f6, #1d4ed8); }
+.btn-h { background: linear-gradient(135deg, #10b981, #059669); }
+.btn:hover { filter: brightness(1.1); transform: translateY(-2px); }
+
+footer { padding: 6rem 0; text-align: center; color: var(--text-muted); font-size: 0.9rem; }
+
+@media (max-width: 768px) {
+    .card-container { grid-template-columns: 1fr; padding: 0 20px; }
+    .wipe-animate { font-size: 2.8rem; }
+    .navbar { width: 95%; top: 10px; }
+}
