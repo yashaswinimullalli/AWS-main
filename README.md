@@ -17,7 +17,7 @@
 
 ---
 ### 👤 Patient Application
-🔗 https://github.com/Preetham-Bharadwaj/AWS-AI-For-Bharath.git
+🔗 https://github.com/Preetham-Bharadwaj/Patient-app.git
 
 ---
 
@@ -28,7 +28,7 @@
 # 🌐 Live Demo
 
 ## 👤 Patient Application  
-👉 https://preetham-bharadwaj.github.io/AWS-AI-For-Bharath/
+👉 https://preetham-bharadwaj.github.io/Patient-app/
 
 ## 🏥 Hospital Dashboard  
 👉 https://siddesh-g-h.github.io/Hospital-dashboard/
